@@ -33,8 +33,8 @@ $adminEmail1 = "aravindganipisetty@gmail.com";
 $adminEmail2 = "ganiaravind699@gmail.com";
 
 // ✅ Gmail SMTP sender (you must use App Password, not normal password)
-$gmailUser = "aravindganipisetty@gmail.com";         // sender gmail
-$gmailAppPassword = "jxhd hjmk iacg vkeh";     // 16-char app password
+$gmailUser = "YOUR_GMAIL@gmail.com";         // sender gmail
+$gmailAppPassword = "YOUR_APP_PASSWORD";     // 16-char app password
 
 $mail = new PHPMailer(true);
 
