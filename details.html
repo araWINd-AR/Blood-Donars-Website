@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>REGISTER DETAILS</title>
+
+  <style>
+    body{font-family: Arial, sans-serif;}
+    .loginbox{max-width: 900px; margin: 30px auto; padding: 10px;}
+    table{width: 100%; border-collapse: collapse;}
+    td{padding: 10px; vertical-align: top;}
+    input[type="text"], input[type="email"], input[type="tel"]{
+      width: 100%;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+    button{
+      padding: 10px 16px;
+      cursor: pointer;
+    }
+    .contact{
+      text-align: center;
+    }
+    .contact h1{margin: 6px 0;}
+    .msg{
+      margin: 10px 0 20px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      background: #f6fff6;
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="loginbox">
+
+    <!-- Success message after sending (send_interest.php redirects back with ?sent=1) -->
+    <div class="msg" id="sentMsg">✅ Details sent to admin email successfully.</div>
+
+    <!-- ✅ IMPORTANT: action + method added -->
+    <form action="send_interest.php" method="POST">
+      <table>
+        <tr>
+          <td colspan="2" class="contact">
+            <h1 color= "RED">**ADMIN CONTACT DETAILS**</h1>
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan="2" class="contact">
+            <hr><hr><hr>
+            <h1>Name="Aravind"</h1>
+     
+            <h1>Mail="aravindganipisetty@gmail.com"</h1>
+            <h1>Another_mail="ganiaravind699@gmail.com"</h1>
+            <hr><hr><hr>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Name :</td>
+          <!-- ✅ Changed name attribute to match PHP -->
+          <td><input type="text" placeholder="Name" name="name" required></td>
+        </tr>
+
+        <tr>
+          <td>Gender :</td>
+          <td><input type="text" placeholder="Gender Name" name="gender" required></td>
+        </tr>
+
+        <tr>
+          <td>Blood_Group:</td>
+          <td><input type="text" placeholder="blood group Name" name="blood_group" required></td>
+        </tr>
+
+        <tr>
+          <td>Email :</td>
+          <!-- ✅ type fixed: email -->
+          <td><input type="email" placeholder="Email" name="email" required></td>
+        </tr>
+
+        <tr>
+          <td>Phone_no:</td>
+          <!-- ✅ type fixed: tel -->
+          <td><input type="tel" placeholder="98480*****" name="phone" required></td>
+        </tr>
+
+        <tr>
+          <td colspan="2">
+            <!-- ❌ Removed useless text input -->
+            <!-- ✅ Real submit button -->
+            <button type="submit" name="send">These details send to mail</button>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </div>
+
+  <script>
+    // Show success banner if redirected with ?sent=1
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("sent") === "1") {
+      document.getElementById("sentMsg").style.display = "block";
+    }
+  </script>
+</body>
+</html>
