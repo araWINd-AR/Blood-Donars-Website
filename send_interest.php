@@ -29,8 +29,8 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 }
 
 // ✅ Your admin receiving emails (where you want to receive messages)
-$adminEmail1 = "aravindganipisetty@gmail.com";
-$adminEmail2 = "ganiaravind699@gmail.com";
+$adminEmail1 = "xxxxxxxxxxxxxxxxxxx@gmail.com";
+$adminEmail2 = "xxxxxxxxxxxxx@gmail.com";
 
 // ✅ Gmail SMTP sender (you must use App Password, not normal password)
 $gmailUser = "YOUR_GMAIL@gmail.com";         // sender gmail
@@ -84,3 +84,4 @@ try {
     // Show error (for debugging)
     exit("Mailer Error: " . $mail->ErrorInfo);
 }
+
